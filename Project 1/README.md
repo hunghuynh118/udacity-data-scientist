@@ -28,7 +28,8 @@ I wanted the chance to investigate the data and also communicate my findings in 
 
 ## File Descriptions <a name="files"></a>
 
-There is only one notebook available here to showcase my work related to the above questions. The notebook contains code, comments, and markdown cells to guild reader through the process.
+- The notebook file showcases my work related to the above questions. The notebook contains code, comments, and markdown cells to guild reader through the process.
+- The `.csv` file is the dataset I used in this project.
 
 ## Results<a name="results"></a>
 
