@@ -2,7 +2,7 @@
 
 ### by Hung Huynh
 
-This is the repository where I save my work when studying Udacity Data Scientist course.
+This is the repository where I save my work while studying Udacity Data Scientist course.
 
 ## Project 1: Writing a Data Scientist Blog Post
 
