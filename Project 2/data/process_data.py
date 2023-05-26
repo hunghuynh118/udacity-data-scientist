@@ -1,16 +1,72 @@
 import sys
+import pandas as pd
+from sqlalchemy import create_engine
 
 
 def load_data(messages_filepath, categories_filepath):
-    pass
+    """Load messages and categories datasets then merge them into a dataframe
+
+    Args:
+        messages_filepath (string): messages filepath
+        categories_filepath (string): categories filepath
+
+    Returns:
+        dataframe: a dataframe combining two datasets
+    """
+    # load messages and categories datasets
+    messages = pd.read_csv(messages_filepath)
+    categories = pd.read_csv(categories_filepath)
+
+    # merge two datasets
+    df = messages.merge(categories, on='id')
+
+    return df
 
 
 def clean_data(df):
-    pass
+    """Clean dataset by creating new category columns and removing duplicates
+
+    Args:
+        df (dataframe): uncleaned dataframe
+
+    Returns:
+        dataframe: cleaned dataframe
+    """
+    # create a dataframe of the 36 individual category columns
+    categories = df['categories'].str.split(';', expand=True)
+
+    # extract a list of new column names for categories from the first row
+    row = categories.head(1)
+    category_colnames = [value[:-2] for value in row.values[0]]
+
+    # rename the columns of `categories`
+    categories.columns = category_colnames
+
+    # convert category values to just numbers 0 or 1
+    for column in categories:
+        categories[column] = categories[column].apply(lambda x: x[-1])
+        categories[column] = categories[column].astype(int)
+    
+    # replace the categories column in df with new category columns
+    df = df.drop('categories', axis=1)
+    df = pd.concat([df, categories], axis=1)
+
+    # remove duplicates
+    df = df.drop_duplicates()
+
+    return df
 
 
 def save_data(df, database_filename):
-    pass  
+    """Save cleaned dataset into an sqlite database
+
+    Args:
+        df (dataframe): cleaned dataframe
+        database_filename (string): database filename
+    """
+    # create engine connecting to database then save the dataframe
+    engine = create_engine('sqlite:///{}'.format(database_filename))
+    df.to_sql('DisasterResponse', engine, index=False)  
 
 
 def main():
