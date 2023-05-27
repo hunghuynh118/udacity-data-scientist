@@ -46,6 +46,7 @@ def clean_data(df):
     for column in categories:
         categories[column] = categories[column].apply(lambda x: x[-1])
         categories[column] = categories[column].astype(int)
+        categories.loc[(categories[column] != 0) & (categories[column] != 1) , column] = 1
     
     # replace the categories column in df with new category columns
     df = df.drop('categories', axis=1)
@@ -66,7 +67,7 @@ def save_data(df, database_filename):
     """
     # create engine connecting to database then save the dataframe
     engine = create_engine('sqlite:///{}'.format(database_filename))
-    df.to_sql('DisasterResponse', engine, index=False)  
+    df.to_sql('DisasterResponse', engine, index=False, if_exists='replace')  
 
 
 def main():
