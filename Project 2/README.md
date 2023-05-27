@@ -51,23 +51,26 @@ I also created a web app where an emergency worker can input a new message and g
 
 ## File Descriptions <a name="files"></a>
 
-- :open_file_folder: app
-| - template
-| |- master.html  # main page of web app
-| |- go.html  # classification result page of web app
-|- run.py  # Flask file that runs app
-
-- data
-|- disaster_categories.csv  # data to process 
-|- disaster_messages.csv  # data to process
-|- process_data.py
-|- InsertDatabaseName.db   # database to save clean data to
-
-- models
-|- train_classifier.py
-|- classifier.pkl  # saved model 
-
-- README.md
+📦Project 2
+ ┣ 📂app
+ ┃ ┣ 📂templates
+ ┃ ┃ ┣ 📜go.html
+ ┃ ┃ ┗ 📜master.html
+ ┃ ┗ 📜run.py
+ ┣ 📂data
+ ┃ ┣ 📜DisasterResponse.db
+ ┃ ┣ 📜disaster_categories.csv
+ ┃ ┣ 📜disaster_messages.csv
+ ┃ ┗ 📜process_data.py
+ ┣ 📂images
+ ┃ ┣ 📜plot1.png
+ ┃ ┣ 📜plot2.png
+ ┃ ┣ 📜plot3.png
+ ┃ ┗ 📜webapp.png
+ ┣ 📂models
+ ┃ ┣ 📜classifier.pkl
+ ┃ ┗ 📜train_classifier.py
+ ┗ 📜README.md
 
 ## Results<a name="results"></a>
 
