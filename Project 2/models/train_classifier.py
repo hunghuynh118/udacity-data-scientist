@@ -1,6 +1,6 @@
 import sys
 import pandas as pd
-import pickle
+import joblib
 from sqlalchemy import create_engine
 import nltk
 nltk.download(['punkt', 'wordnet'])
@@ -108,7 +108,7 @@ def save_model(model, model_filepath):
         model (model): a machine learning model
         model_filepath (string): filepath to export model
     """
-    pickle.dump(model, open(model_filepath, 'wb'))
+    joblib.dump(model, open(model_filepath, 'wb'), compress=3)
 
 
 def main():
