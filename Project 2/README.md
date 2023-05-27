@@ -65,7 +65,7 @@ I also created a web app where an emergency worker can input a new message and g
 
 ## Results<a name="results"></a>
 
-T web application provides a user-friendly interface. Users can type in a message and see instant classification results.
+The web application provides a user-friendly interface. Users can type in a message and see instant classification results.
 
 ![webapp](./images/webapp.png)
 
