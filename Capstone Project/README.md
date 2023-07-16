@@ -31,7 +31,7 @@ This project was written in Python, using Jupyter Notebook on Anaconda. The rele
 This repo contains 7 files:
 
 - `Starbucks_Capstone_notebook.ipynb`: the notebook file containing all code
-- `Starbucks_Capstone_notebook.pdf`: pdf version of the notebook file
+- `Starbucks_Capstone_notebook.html`: html version of the notebook file
 - `README.md`: this file introduces overall the project
 - `master.csv`: the cleaned dataset merged from 3 other datasets
 - `data\portfolio.json`: json file containing offer data
@@ -42,7 +42,7 @@ This repo contains 7 files:
 
 - Code repository on Github could be found [here](https://github.com/hunghuynh118/udacity-data-scientist/tree/main/Capstone%20Project).
 
-- Blog post report on Medium could be found [here](TBD).
+- Blog post report on Medium could be found [here](https://medium.com/@hunghuynh.11899/does-the-starbucks-offers-target-a-specific-customer-group-8cf71d420c22).
 
 ## Licensing, Authors, Acknowledgements
 
