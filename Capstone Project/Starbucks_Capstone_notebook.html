@@ -13263,45 +13263,22 @@ div#notebook {
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">itertools</span>
-<span class="kn">import</span> <span class="nn">math</span>
-<span class="kn">import</span> <span class="nn">json</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
 
 <span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="k">import</span> <span class="n">MinMaxScaler</span>
 <span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="k">import</span> <span class="n">train_test_split</span><span class="p">,</span> <span class="n">GridSearchCV</span>
-<span class="kn">from</span> <span class="nn">sklearn.svm</span> <span class="k">import</span> <span class="n">SVC</span>
-<span class="kn">from</span> <span class="nn">sklearn.tree</span> <span class="k">import</span> <span class="n">DecisionTreeClassifier</span>
-<span class="kn">from</span> <span class="nn">sklearn.naive_bayes</span> <span class="k">import</span> <span class="n">GaussianNB</span> 
-<span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="k">import</span> <span class="n">KNeighborsClassifier</span>
 <span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="k">import</span> <span class="n">LogisticRegression</span>
-<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="k">import</span> <span class="n">RandomForestClassifier</span>
 <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="k">import</span> <span class="n">accuracy_score</span>
+
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="ne">DeprecationWarning</span><span class="p">)</span> 
 
 <span class="o">%</span> <span class="n">matplotlib</span> <span class="n">inline</span>
 <span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">mode</span><span class="o">.</span><span class="n">chained_assignment</span> <span class="o">=</span> <span class="kc">None</span> <span class="c1"># ignore SettingWithCopyWarning</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>/opt/conda/lib/python3.6/site-packages/sklearn/ensemble/weight_boosting.py:29: DeprecationWarning: numpy.core.umath_tests is an internal NumPy module and should not be imported. It will be removed in a future NumPy release.
-  from numpy.core.umath_tests import inner1d
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -13697,8 +13674,8 @@ memory usage: 560.0+ bytes
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>bogo             4
-discount         4
+<pre>discount         4
+bogo             4
 informational    2
 Name: offer_type, dtype: int64</pre>
 </div>
@@ -15655,48 +15632,48 @@ Name: event, dtype: int64</pre>
   </thead>
   <tbody>
     <tr>
-      <th>65801</th>
-      <td>offer received</td>
-      <td>11171</td>
+      <th>69060</th>
+      <td>offer viewed</td>
+      <td>1508</td>
       <td>168</td>
-      <td>4d5c57ea9a6940dd891ad53e9dbe8da0</td>
+      <td>f19421c1d4aa40978ebb69ca19b0e20d</td>
       <td>0.00</td>
       <td>0</td>
     </tr>
     <tr>
-      <th>234911</th>
+      <th>290732</th>
       <td>transaction</td>
-      <td>3688</td>
-      <td>540</td>
+      <td>2765</td>
+      <td>648</td>
       <td></td>
-      <td>13.31</td>
+      <td>3.55</td>
       <td>0</td>
     </tr>
     <tr>
-      <th>31039</th>
+      <th>259576</th>
       <td>transaction</td>
-      <td>8128</td>
-      <td>48</td>
+      <td>9542</td>
+      <td>576</td>
       <td></td>
-      <td>0.14</td>
+      <td>11.48</td>
       <td>0</td>
     </tr>
     <tr>
-      <th>170023</th>
-      <td>offer viewed</td>
-      <td>1369</td>
-      <td>414</td>
+      <th>247233</th>
+      <td>offer received</td>
+      <td>9207</td>
+      <td>576</td>
       <td>ae264e3637204a6fb9bb56bc8210ddfd</td>
       <td>0.00</td>
       <td>0</td>
     </tr>
     <tr>
-      <th>203704</th>
-      <td>offer received</td>
-      <td>12713</td>
-      <td>504</td>
-      <td>f19421c1d4aa40978ebb69ca19b0e20d</td>
-      <td>0.00</td>
+      <th>84227</th>
+      <td>transaction</td>
+      <td>2860</td>
+      <td>210</td>
+      <td></td>
+      <td>28.08</td>
       <td>0</td>
     </tr>
   </tbody>
@@ -15763,48 +15740,48 @@ Name: event, dtype: int64</pre>
   </thead>
   <tbody>
     <tr>
-      <th>273020</th>
+      <th>19054</th>
       <td>transaction</td>
-      <td>4918</td>
-      <td>600</td>
+      <td>8821</td>
+      <td>12</td>
       <td></td>
-      <td>18.34</td>
+      <td>22.18</td>
       <td>0</td>
     </tr>
     <tr>
-      <th>180657</th>
+      <th>283718</th>
       <td>transaction</td>
-      <td>6406</td>
-      <td>438</td>
+      <td>13617</td>
+      <td>624</td>
       <td></td>
-      <td>8.64</td>
+      <td>26.09</td>
       <td>0</td>
     </tr>
     <tr>
-      <th>242703</th>
+      <th>224616</th>
       <td>transaction</td>
-      <td>3339</td>
-      <td>564</td>
+      <td>10068</td>
+      <td>516</td>
       <td></td>
-      <td>2.06</td>
+      <td>14.58</td>
       <td>0</td>
     </tr>
     <tr>
-      <th>182827</th>
+      <th>144230</th>
       <td>transaction</td>
-      <td>1301</td>
-      <td>444</td>
+      <td>6135</td>
+      <td>384</td>
       <td></td>
-      <td>18.41</td>
+      <td>6.00</td>
       <td>0</td>
     </tr>
     <tr>
-      <th>23187</th>
+      <th>277397</th>
       <td>transaction</td>
-      <td>5842</td>
-      <td>24</td>
+      <td>2082</td>
+      <td>612</td>
       <td></td>
-      <td>15.90</td>
+      <td>1.58</td>
       <td>0</td>
     </tr>
   </tbody>
@@ -15943,47 +15920,47 @@ Name: event, dtype: int64</pre>
   </thead>
   <tbody>
     <tr>
-      <th>18590</th>
+      <th>205681</th>
+      <td>offer received</td>
+      <td>13142</td>
+      <td>504</td>
+      <td>0b1e1539f2cc45b7b9fa7c272da2e1d7</td>
+      <td>0.0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>212747</th>
+      <td>offer received</td>
+      <td>7466</td>
+      <td>504</td>
+      <td>5a8bc65990b245e5a138643cd4eb9837</td>
+      <td>0.0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>260098</th>
       <td>offer viewed</td>
-      <td>14345</td>
-      <td>12</td>
-      <td>9b98b8c7a33c4b65b9aebfe6a799e6d9</td>
-      <td>0.0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>76677</th>
-      <td>offer completed</td>
-      <td>2046</td>
-      <td>186</td>
-      <td>4d5c57ea9a6940dd891ad53e9dbe8da0</td>
-      <td>0.0</td>
-      <td>10</td>
-    </tr>
-    <tr>
-      <th>249772</th>
-      <td>offer received</td>
-      <td>8089</td>
+      <td>16781</td>
       <td>576</td>
-      <td>3f207df678b143eea3cee63160fa8bed</td>
+      <td>fafdcd668e3743c1bb461111dcafc2a4</td>
       <td>0.0</td>
       <td>0</td>
     </tr>
     <tr>
-      <th>123482</th>
-      <td>offer received</td>
-      <td>8109</td>
-      <td>336</td>
+      <th>237165</th>
+      <td>offer completed</td>
+      <td>8958</td>
+      <td>546</td>
       <td>9b98b8c7a33c4b65b9aebfe6a799e6d9</td>
       <td>0.0</td>
-      <td>0</td>
+      <td>5</td>
     </tr>
     <tr>
-      <th>53713</th>
-      <td>offer received</td>
-      <td>10034</td>
-      <td>168</td>
-      <td>4d5c57ea9a6940dd891ad53e9dbe8da0</td>
+      <th>80676</th>
+      <td>offer viewed</td>
+      <td>16390</td>
+      <td>198</td>
+      <td>f19421c1d4aa40978ebb69ca19b0e20d</td>
       <td>0.0</td>
       <td>0</td>
     </tr>
@@ -16237,44 +16214,44 @@ Name: event, dtype: int64</pre>
   </thead>
   <tbody>
     <tr>
-      <th>123767</th>
+      <th>263169</th>
       <td>2</td>
-      <td>5541</td>
-      <td>336</td>
+      <td>1110</td>
+      <td>582</td>
+      <td>9</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>226606</th>
+      <td>2</td>
+      <td>13979</td>
+      <td>522</td>
+      <td>7</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>230646</th>
+      <td>2</td>
+      <td>5158</td>
+      <td>534</td>
       <td>5</td>
       <td>0</td>
     </tr>
     <tr>
-      <th>229879</th>
+      <th>289143</th>
       <td>1</td>
-      <td>2493</td>
-      <td>528</td>
-      <td>2</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>93265</th>
-      <td>2</td>
-      <td>3280</td>
-      <td>240</td>
+      <td>3220</td>
+      <td>642</td>
+      <td>1</td>
       <td>5</td>
-      <td>0</td>
     </tr>
     <tr>
-      <th>237376</th>
+      <th>68813</th>
       <td>1</td>
-      <td>15541</td>
-      <td>552</td>
-      <td>2</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>169670</th>
-      <td>1</td>
-      <td>5570</td>
-      <td>414</td>
-      <td>5</td>
+      <td>2262</td>
+      <td>168</td>
       <td>10</td>
+      <td>2</td>
     </tr>
   </tbody>
 </table>
@@ -17570,7 +17547,7 @@ memory usage: 10.6 MB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[107]:</div>
+<div class="prompt input_prompt">In&nbsp;[91]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># visualize the income by offer type</span>
@@ -17608,7 +17585,7 @@ memory usage: 10.6 MB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[91]:</div>
+<div class="prompt input_prompt">In&nbsp;[92]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># visualize the membership days by offer type</span>
@@ -17680,7 +17657,7 @@ memory usage: 10.6 MB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[92]:</div>
+<div class="prompt input_prompt">In&nbsp;[93]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># create features and target tables</span>
@@ -17695,7 +17672,7 @@ memory usage: 10.6 MB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[93]:</div>
+<div class="prompt input_prompt">In&nbsp;[94]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -17711,7 +17688,7 @@ memory usage: 10.6 MB
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[93]:</div>
+    <div class="prompt output_prompt">Out[94]:</div>
 
 
 
@@ -17849,7 +17826,7 @@ memory usage: 10.6 MB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[94]:</div>
+<div class="prompt input_prompt">In&nbsp;[95]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">Y</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -17865,7 +17842,7 @@ memory usage: 10.6 MB
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[94]:</div>
+    <div class="prompt output_prompt">Out[95]:</div>
 
 
 
@@ -17887,7 +17864,7 @@ Name: event, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[95]:</div>
+<div class="prompt input_prompt">In&nbsp;[96]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># create training and testing sets </span>
@@ -17901,7 +17878,7 @@ Name: event, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[96]:</div>
+<div class="prompt input_prompt">In&nbsp;[97]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># define a function to calculate the accuracy for the models</span>
@@ -17919,7 +17896,7 @@ Name: event, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[97]:</div>
+<div class="prompt input_prompt">In&nbsp;[98]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># create the model, fit it, then predict the test set</span>
@@ -17975,7 +17952,7 @@ Prediction accuracy: 60.79%
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[98]:</div>
+<div class="prompt input_prompt">In&nbsp;[99]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># normalize some numerical values</span>
@@ -17996,7 +17973,7 @@ Prediction accuracy: 60.79%
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[98]:</div>
+    <div class="prompt output_prompt">Out[99]:</div>
 
 
 
@@ -18205,7 +18182,7 @@ Prediction accuracy: 60.79%
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>{&#39;C&#39;: 0.1, &#39;penalty&#39;: &#39;l1&#39;}
-0.6357988526791163
+0.635811058220432
 </pre>
 </div>
 </div>
@@ -18304,8 +18281,8 @@ Prediction accuracy: 60.79%
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Accuracy on training set: 64.44%
-Prediction accuracy: 63.98%
+<pre>Accuracy on training set: 64.47%
+Prediction accuracy: 64.1%
 </pre>
 </div>
 </div>
